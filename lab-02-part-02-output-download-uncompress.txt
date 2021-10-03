@@ -19,7 +19,7 @@ $ echo hello
 Copy and paste the output below.
 ----------
 
-
+Hello
 
 ==========
 2. Type:
@@ -28,7 +28,7 @@ $ echo hello there
 
 Copy and paste the output below.
 ----------
-
+hello there
 
 
 ==========
@@ -38,7 +38,7 @@ $ echo good mornin'
 
 Copy and paste the output below.
 ----------
-
+no output (stuck)
 
 
 ==========
@@ -57,7 +57,7 @@ $ echo "good mornin'"
 Copy and paste the output below.
 ----------
 
-
+good mornin'
 
 ==========
 6. There are some other symbols that have special meanings if you don't quote them.  For example, > brings up a different prompt.  Try *.
@@ -67,7 +67,7 @@ $ echo *
 What happens?
 ----------
 
-
+It shows my files/folders
 
 ==========
 7. Ok... that's a lot of output.  How do we clean up our screen so that it's empty again?
@@ -75,7 +75,7 @@ What happens?
 Write the command that you used below:
 ----------
 
-
+clear
 
 ==========
 We're going to practice downloading files from a web site.  We'll use this practice to download more lab materials!
@@ -87,7 +87,12 @@ $ curl google.com
 
 Copy and paste the output below.
 ----------
-
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
 
 
 ==========
@@ -99,13 +104,16 @@ Copy and paste the output below, but not the whole thing!  Just copy up to the p
 ----------
 
 
-
+<title>Google</title>
 ==========
 10. That's great, but what if I want to save the file?  What flag/option and option argument would I use to download the page to a file called google.html?  Run it to download the URL www.google.com.
 
 Write the command you used below.  Also copy and paste the output below.
 ----------
-
+$ curl -o google.html www.google.com
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 15407    0 15407    0     0   106k      0 --:--:-- --:--:-- --:--:--  106k
 
 
 ==========
@@ -114,7 +122,8 @@ Write the command you used below.  Also copy and paste the output below.
 Write the command you used to determine your directory.  Also, copy and paste the output below.
 ----------
 
-
+$ pwd
+/c/Users/elija
 
 ==========
 12. If you're not in your home directory, change to it (use the shortcut).
@@ -122,7 +131,7 @@ Write the command you used to determine your directory.  Also, copy and paste th
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
 ----------
 
-
+cd ~
 
 ==========
 13. So... the lab materials are located at this url:
@@ -138,6 +147,10 @@ Use ls to verify that it downloaded.
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
 ----------
 
+$ curl -o mtec1002-lab-02.zip http://foureyes.github.io/mtec1002-spring2014/labs/02/mtec1002-lab-02.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   162  100   162    0     0   1442      0 --:--:-- --:--:-- --:--:--  1446
 
 
 ==========
@@ -164,7 +177,15 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 
 Copy and paste the output below.
 ----------
-
+'3D Objects'/             Downloads/                                                         MicrosoftEdgeBackups/   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                        SendTo@
+ ansel/                  'Elijah.Moyd33@login.cuny.edu Creative Cloud Files (enterprise)'/   mtec1002-lab-02.zip     NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms  'Start Menu'@
+ AppData/                 Favorites/                                                         mtec1003/               NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms   stuff/
+'Application Data'@       fightcade.log                                                      Music/                  ntuser.ini                                                                                     Templates@
+ Contacts/                fightcade-debug.log                                               'My Documents'@          OneDrive/                                                                                      Tracing/
+ Cookies@                 ggpo-ng.ini                                                        NetHood@                PrintHood@                                                                                     Videos/
+'Creative Cloud Files'/   google.html                                                        NTUSER.DAT              Recent@
+ Desktop/                 Links/                                                             ntuser.dat.LOG1        'Saved Games'/
+ Documents/              'Local Settings'@                                                   ntuser.dat.LOG2         Searches/
 
 
 ==========
@@ -177,7 +198,7 @@ List the files in the directory you're currently in (which should be stuff).
 Copy and paste the output below.
 ----------
 
-
+hello.txt
 
 ==========
 18. Go up one directory back into your home directory.  Run the following commands exactly to create a compressed archive of the stuff folder.
@@ -188,7 +209,50 @@ List the files in the directory you're currently in (which should be home).
 
 Copy and paste the output below.
 ----------
-
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020 '3D Objects'/
+drwxr-xr-x 1 elija 197610       0 Mar 14  2020  ansel/
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020  AppData/
+lrwxrwxrwx 1 elija 197610      30 Jun 19  2020 'Application Data' -> /c/Users/elija/AppData/Roaming/
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020  Contacts/
+lrwxrwxrwx 1 elija 197610      58 Jun 19  2020  Cookies -> /c/Users/elija/AppData/Local/Microsoft/Windows/INetCookies/
+drwxr-xr-x 1 elija 197610       0 Oct  3 04:14 'Creative Cloud Files'/
+drwxr-xr-x 1 elija 197610       0 Oct  3 05:03  Desktop/
+drwxr-xr-x 1 elija 197610       0 Mar 14  2020  Documents/
+drwxr-xr-x 1 elija 197610       0 Oct  2 21:28  Downloads/
+drwxr-xr-x 1 elija 197610       0 Sep 27  2020 'Elijah.Moyd33@login.cuny.edu Creative Cloud Files (enterprise)'/
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020  Favorites/
+-rw-r--r-- 1 elija 197610       0 Sep 29  2020  fightcade.log
+-rw-r--r-- 1 elija 197610       0 Sep 29  2020  fightcade-debug.log
+-rw-r--r-- 1 elija 197610    1107 Aug  7 18:10  ggpo-ng.ini
+-rw-r--r-- 1 elija 197610   15407 Oct  3 05:40  google.html
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020  Links/
+lrwxrwxrwx 1 elija 197610      28 Jun 19  2020 'Local Settings' -> /c/Users/elija/AppData/Local/
+drwxr-xr-x 1 elija 197610       0 Mar 14  2020  MicrosoftEdgeBackups/
+-rw-r--r-- 1 elija 197610     166 Oct  3 05:53  mtec1002-lab-02
+drwxr-xr-x 1 elija 197610       0 Sep 22 19:49  mtec1003/
+drwxr-xr-x 1 elija 197610       0 Aug  5 17:16  Music/
+lrwxrwxrwx 1 elija 197610      24 Jun 19  2020 'My Documents' -> /c/Users/elija/Documents/
+lrwxrwxrwx 1 elija 197610      66 Jun 19  2020  NetHood -> '/c/Users/elija/AppData/Roaming/Microsoft/Windows/Network Shortcuts'/
+drwxr-xr-x 1 elija 197610       0 Oct  3 05:58 'New folder'/
+-rw-r--r-- 1 elija 197610 8650752 Oct  2 21:58  NTUSER.DAT
+-rw-r--r-- 1 elija 197610 2256896 Jun 19  2020  ntuser.dat.LOG1
+-rw-r--r-- 1 elija 197610   45056 Jun 19  2020  ntuser.dat.LOG2
+-rw-r--r-- 1 elija 197610   65536 Jun 19  2020  NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf
+-rw-r--r-- 1 elija 197610  524288 Jun 19  2020  NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms
+-rw-r--r-- 1 elija 197610  524288 Jun 19  2020  NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms
+-rw-r--r-- 1 elija 197610      20 Jun 19  2020  ntuser.ini
+drwxr-xr-x 1 elija 197610       0 Jul 30 17:23  OneDrive/
+lrwxrwxrwx 1 elija 197610      66 Jun 19  2020  PrintHood -> '/c/Users/elija/AppData/Roaming/Microsoft/Windows/Printer Shortcuts'/
+lrwxrwxrwx 1 elija 197610      55 Jun 19  2020  Recent -> /c/Users/elija/AppData/Roaming/Microsoft/Windows/Recent/
+drwxr-xr-x 1 elija 197610       0 May 28 23:32 'Saved Games'/
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020  Searches/
+lrwxrwxrwx 1 elija 197610      55 Jun 19  2020  SendTo -> /c/Users/elija/AppData/Roaming/Microsoft/Windows/SendTo/
+lrwxrwxrwx 1 elija 197610      59 Jun 19  2020 'Start Menu' -> '/c/Users/elija/AppData/Roaming/Microsoft/Windows/Start Menu'/
+drwxr-xr-x 1 elija 197610       0 Oct  3 05:52  stuff/
+-rw-r--r-- 1 elija 197610   10240 Oct  3 06:02  stuff.tar
+lrwxrwxrwx 1 elija 197610      58 Jun 19  2020  Templates -> /c/Users/elija/AppData/Roaming/Microsoft/Windows/Templates/
+drwxr-xr-x 1 elija 197610       0 Aug 27  2020  Tracing/
+drwxr-xr-x 1 elija 197610       0 Oct  3 04:14  Videos/
 
 
 ==========
@@ -198,7 +262,7 @@ $ tar -cvf stuff.tar stuff
 
 Copy and paste the output below.
 ----------
-
+same question
 
 
 ==========
@@ -217,6 +281,49 @@ gzip stuff.tar
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
 
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020 '3D Objects'/
+drwxr-xr-x 1 elija 197610       0 Mar 14  2020  ansel/
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020  AppData/
+lrwxrwxrwx 1 elija 197610      30 Jun 19  2020 'Application Data' -> /c/Users/elija/AppData/Roaming/
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020  Contacts/
+lrwxrwxrwx 1 elija 197610      58 Jun 19  2020  Cookies -> /c/Users/elija/AppData/Local/Microsoft/Windows/INetCookies/
+drwxr-xr-x 1 elija 197610       0 Oct  3 04:14 'Creative Cloud Files'/
+drwxr-xr-x 1 elija 197610       0 Oct  3 05:03  Desktop/
+drwxr-xr-x 1 elija 197610       0 Mar 14  2020  Documents/
+drwxr-xr-x 1 elija 197610       0 Oct  2 21:28  Downloads/
+drwxr-xr-x 1 elija 197610       0 Sep 27  2020 'Elijah.Moyd33@login.cuny.edu Creative Cloud Files (enterprise)'/
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020  Favorites/
+-rw-r--r-- 1 elija 197610       0 Sep 29  2020  fightcade.log
+-rw-r--r-- 1 elija 197610       0 Sep 29  2020  fightcade-debug.log
+-rw-r--r-- 1 elija 197610    1107 Aug  7 18:10  ggpo-ng.ini
+-rw-r--r-- 1 elija 197610   15407 Oct  3 05:40  google.html
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020  Links/
+lrwxrwxrwx 1 elija 197610      28 Jun 19  2020 'Local Settings' -> /c/Users/elija/AppData/Local/
+drwxr-xr-x 1 elija 197610       0 Mar 14  2020  MicrosoftEdgeBackups/
+-rw-r--r-- 1 elija 197610     162 Oct  3 05:43  mtec1002-lab-02.zip
+drwxr-xr-x 1 elija 197610       0 Sep 22 19:49  mtec1003/
+drwxr-xr-x 1 elija 197610       0 Aug  5 17:16  Music/
+lrwxrwxrwx 1 elija 197610      24 Jun 19  2020 'My Documents' -> /c/Users/elija/Documents/
+lrwxrwxrwx 1 elija 197610      66 Jun 19  2020  NetHood -> '/c/Users/elija/AppData/Roaming/Microsoft/Windows/Network Shortcuts'/
+-rw-r--r-- 1 elija 197610 8650752 Oct  2 21:58  NTUSER.DAT
+-rw-r--r-- 1 elija 197610 1900544 Jun 19  2020  ntuser.dat.LOG1
+-rw-r--r-- 1 elija 197610 2224128 Jun 19  2020  ntuser.dat.LOG2
+-rw-r--r-- 1 elija 197610   65536 Jun 19  2020  NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf
+-rw-r--r-- 1 elija 197610  524288 Jun 19  2020  NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms
+-rw-r--r-- 1 elija 197610  524288 Jun 19  2020  NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms
+-rw-r--r-- 1 elija 197610      20 Jun 19  2020  ntuser.ini
+drwxr-xr-x 1 elija 197610       0 Jul 30 17:23  OneDrive/
+lrwxrwxrwx 1 elija 197610      66 Jun 19  2020  PrintHood -> '/c/Users/elija/AppData/Roaming/Microsoft/Windows/Printer Shortcuts'/
+lrwxrwxrwx 1 elija 197610      55 Jun 19  2020  Recent -> /c/Users/elija/AppData/Roaming/Microsoft/Windows/Recent/
+drwxr-xr-x 1 elija 197610       0 May 28 23:32 'Saved Games'/
+drwxr-xr-x 1 elija 197610       0 Jun 19  2020  Searches/
+lrwxrwxrwx 1 elija 197610      55 Jun 19  2020  SendTo -> /c/Users/elija/AppData/Roaming/Microsoft/Windows/SendTo/
+lrwxrwxrwx 1 elija 197610      59 Jun 19  2020 'Start Menu' -> '/c/Users/elija/AppData/Roaming/Microsoft/Windows/Start Menu'/
+drwxr-xr-x 1 elija 197610       0 Oct  3 05:52  stuff/
+-rw-r--r-- 1 elija 197610     166 Oct  3 05:53  stuff.tar.gz
+lrwxrwxrwx 1 elija 197610      58 Jun 19  2020  Templates -> /c/Users/elija/AppData/Roaming/Microsoft/Windows/Templates/
+drwxr-xr-x 1 elija 197610       0 Aug 27  2020  Tracing/
+drwxr-xr-x 1 elija 197610       0 Oct  3 04:14  Videos/
 
 
 ==========
